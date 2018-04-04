@@ -1,0 +1,128 @@
+body{
+	background-color: #FAFBFC; /* Couleur de fond de la page */
+	font-family: Arial; /* Police générale de la page */
+	font-size: 14px; /* Taille de police générale */
+	margin: 0; /* On supprime d'éventuelles marges extérieures (certains navigateur en ajoutent) */
+	padding: 0; /* On supprime d'éventuelles marges intérieures (certains navigateur en ajoutent) */
+}
+
+.clear{
+	clear: both; /* Permet de "mettre fin" à un flottant ( = "float") */
+}
+
+.left{
+	float: left;
+}
+
+.right{
+	float: right;
+}
+
+/****
+**
+** Elements de contenu principal
+**
+********/
+#main{
+	width: 600px;
+	margin: 20px auto;
+	background-color: #24292E;
+	padding:30px;
+	color: #24292E;
+}
+
+h1{
+	color: #FFFFFF;
+}
+
+article{
+	color: #000000;
+	text-align: justify;
+	margin-bottom: 12px;
+	padding: 10px;
+	width: 200px;
+}
+
+/* Couleurs des blocs selon la classe */
+.bleu{
+	background-color: #5E8595;
+}
+
+.vert{
+	background-color: #B5B5A5;
+}
+
+.jaune{
+	background-color: #E3CEAE;
+}
+
+.rouge{
+	background-color: #8C2C28;
+}
+
+.blanc{
+	background-color: #FFFFFF;
+}
+
+
+/****
+**
+** Règles responsive
+**
+********/
+
+/* Ecran en dessous de 700px */
+@media (max-width: 700px) {
+
+	#main{
+		width: auto;
+	}
+
+	.bleu{
+		background-color: #FFFFFF;
+	}
+
+	.vert{
+		background-color: #5E8595;
+	}
+
+	.jaune{
+		background-color: #B5B5A5;
+	}
+
+	.rouge{
+		background-color: #E3CEAE;
+	}
+
+	.blanc{
+		background-color: #8C2C28;
+	}
+
+}
+
+/* Ecran en dessous de 500px */
+@media (max-width: 500px) {
+
+	article{
+		display: block;
+		clear: both;
+		float: none;
+		width: auto;
+	}
+
+	article img.right{
+		float: none;
+		clear: both;
+		display: block;
+		width: 100%;
+		height: auto;
+	}
+
+}
+
+/* Ecran au dessus de 900px */
+@media (min-width: 1000px) {
+	body{
+		background-color: #353d43;
+	}
+}

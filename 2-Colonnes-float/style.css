@@ -1,0 +1,97 @@
+body{
+	background-color: #FAFBFC; /* Couleur de fond de la page */
+	font-family: Arial; /* Police générale de la page */
+	font-size: 14px; /* Taille de police générale */
+	margin: 0; /* On supprime d'éventuelles marges extérieures (certains navigateur en ajoutent) */
+	padding: 0; /* On supprime d'éventuelles marges intérieures (certains navigateur en ajoutent) */
+}
+
+.clear{
+	clear: both; /* Permet de "mettre fin" à un flottant ( = "float") */
+}
+
+/****
+**
+** Elements de contenu principal
+**
+********/
+#main{
+	width: 600px;
+	margin: 20px auto;
+	background-color: #24292E;
+	padding:30px;
+	color: #24292E;
+}
+
+.colonne{
+	float: left; /* Flottant à gauche par défaut */
+	width: 70px; /* Largeur du bloc */	
+	height: 70px; /* Hauteur du bloc */
+	margin: 20px; 
+
+	/*
+		Les trois propriétés suivantes
+		vous nous permettre de centrer verticalement
+		et horizontalement le contenu de nos blocs
+	*/
+	display: flex; /* L'élément devient "flexible" afin de modifier l'alignement du contenu */
+	justify-content: center; /* Le contenu sera centré // utilisé avec "flex" */
+	align-items: center; /* Les items seront centrés // utilisé avec "flex" */
+	
+}
+
+.colonne.right{
+	/* 
+		Si un élément contient la classe "right",
+		la propriété sera "surchargée" et modifiée 
+		en float:right;
+	*/
+	float: right;
+}
+
+.colonne p{
+	padding: 0; /* Suppression de marges intérieures, certains navigateur pouvant en ajouter par défaut */
+	font-weight: bold; /* Texte en gras */
+	text-transform: uppercase; /* Texte en majuscule */
+}
+
+/* Couleurs des blocs selon la classe */
+.bleu{
+	background-color: #5E8595;
+}
+
+.vert{
+	background-color: #B5B5A5;
+}
+
+.jaune{
+	background-color: #E3CEAE;
+}
+
+.rouge{
+	background-color: #8C2C28;
+}
+
+#main h1{
+	color: #FFFFFF;
+}
+
+#main ul{
+	margin: 0;
+	padding: 0;
+	color: #ffffff;
+}
+
+#main ul li{
+	margin-left: 50px;
+	padding: 10px 0;
+}
+
+#main ul li a{
+	color: #C8C9CB;
+	text-decoration: none;
+}
+
+#main ul li a:hover{
+	text-decoration: underline;
+}

@@ -1,0 +1,98 @@
+body{
+	background-color: #FAFBFC; /* Couleur de fond de la page */
+	font-family: Arial; /* Police générale de la page */
+	font-size: 16px; /* Taille de police générale */
+	margin: 0; /* On supprime d'éventuelles marges extérieures (certains navigateur en ajoutent) */
+	padding: 0; /* On supprime d'éventuelles marges intérieures (certains navigateur en ajoutent) */
+}
+
+.clear{
+	clear: both;
+}
+
+/****
+**
+** Elements d'en-tête
+**
+********/
+header{
+	background-color: #24292E; /* Couleur de fond de notre conteneur */
+}
+
+header .logo{
+	float: left;	/* Flottant à gauche */
+}
+
+header .logo a{
+	display: block;	/* On transforme en type bloc */
+	width: 40px; 
+	background: url("logo.png") center top no-repeat; /* Image de fond : url + alignements horizontal vertical + repetition du mot */
+	background-size: 40px auto; /* Taille de l'image de fond largeur puis hauteur */
+	overflow: hidden; /* Afin de détourer le contenu (= faire disparaitre le texte du lien) */
+	height: 0; /* Hauteur à zéro pour faire disparaitre le contenu via overflow */
+	/* 
+		Marge interne. 
+		La valeur à 40px correspond à la marge haute et permet de masquer 
+		le texte du lien en préservant l'affichage de l'image de fond 
+	*/
+	padding: 40px 0 0 0; 
+	margin: 3px 50px 0 50px;
+
+}
+
+header nav{
+	width: 600px;	/* Largeur du bloc de navigation */
+	margin: 0 auto; /* Aucune marge en haut et en bas, on centre à droite et à gauche */
+	/* 
+		Pour centrer un élément de type bloc par rapport à un conteneur, 
+		il est nécessaire de définir une largeur de conteneur
+	*/
+}
+
+header ul{
+	margin: 0;	/* On supprime d'éventuelles marges extérieures (certains navigateur en ajoutent) */
+	padding: 0; /* On supprime d'éventuelles marges intérieures (certains navigateur en ajoutent) */
+	text-align: center; /* Le texte et éléments de type "inline" seront centrés */
+}
+
+header ul.sous-menu{
+	display: none;	/* Le sous menu est masqué par défaut */
+	position: absolute; /* La position du sous menu sera en absolue par rapport au conteneur */
+	margin-top: 0; /* Avec la position "absolute", cela permet de férer en haut notre sous menu par rapport au conteneur */
+	margin-left: 0; /* Avec la position "absolute", cela permet de férer à gauche notre sous menu par rapport au conteneur */
+}
+
+header li{
+	list-style: none; /* On masque les puces de notre liste à puce */
+	display: inline-block; /* On transforme l'élément de type "inline" en type "inline-block" (comportement hybride entre "inline" et "block" */
+}
+
+header ul.sous-menu li{
+	display: block; /* Pour les sous menu, les éléments s'afficheront les uns en dessous des autres */
+}
+
+header a{
+	color: #C8C9CB; /* Couleur des liens par défaut */
+	background-color: #24292E; /* Couleur de fond des liens */
+	text-decoration: none; /* Aucun surlignage */
+	font-weight: bold; /* Texte en gras */
+	padding:15px 30px; /* Ajout d'une marge intérieure : 15px en haut et en bas et 30px à droite et à gauche */
+	display: block; /* On transforme les éléments de type "inline" en type "block" */
+}
+
+/* 
+	Règle s'appliquant au survol des éléments "li", 
+	sur les liens directement enfants
+*/
+header li:hover > a{ 
+	background-color: #C8C9CB; /* Couleur de fond des liens au survol de la souris */
+	color: #24292E; /* Couleur du texte des liens au survol de la souris */
+}
+
+/*
+	Règle s'appliquant au survol des éléments "li",
+	si un sous menu est présent
+*/
+header li:hover ul.sous-menu{
+	display: block; /* On affiche le sous menu */
+}
